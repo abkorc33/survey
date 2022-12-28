@@ -11,7 +11,7 @@
 	}
 
 	#footerNav a:hover {
-		color: darkslateblue;
+		color: gray;
 	}
 
 	.btn_gotop {
@@ -36,38 +36,13 @@
 			</svg>
 		</div>
 	</a>
-	<a class="nav-link my-3" id="footerExtContents" data-bs-toggle="collapse" href="#collapseFooter" aria-expanded="false">Linker(주) 사업자 정보</a>
+	<a class="nav-link my-3" id="footerExtContents" data-bs-toggle="collapse" href="#collapseFooter" aria-expanded="false">Survey(주) 프로젝트 정보</a>
 	<div class="collapse" id="collapseFooter">
 		<ul class="card card-body gap-3">
-			<li>대표 이사 : 김진호</li>
-			<li>사업자 등록번호 : 123-45-67890</li>
-			<li>통신판매업신고번호 : 제 2021-서울강남-00000호</li>
-			<li>주소 : 서울특별시 강남구 테헤란로 427, 10층(역삼동, 역삼역 1번 출구)</li>
-			<li>전화번호 : 02-1234-5678</li>
-			<li>팩스번호 : 02-1234-5679</li>
-			<li>이메일 : <a href="mailto:">@linker.com</a></li>
-			<li>개인정보관리책임자 : 김진호</li>
+			<li>작성자 : 김수현</li>
+			<li>프로젝트 기간 : 12-27 ~ </li>
+			<li>이메일 : <a href="mailto:">@gmail.com</a></li>
 		</ul>
 	</div>
-
-	<div class="my-3">
-		<a  href="#" target="_blank">사업자정보 확인</a>
-		|
-		<a  href="#">이용 약관</a>
-	</div>
-
-	<div>
-		<a  href="#">페이</a>
-		|
-		<a  href="#">안전거래센터</a>
-	</div>
-
-	<div class="my-3">
-		<a  href="#">전자금융거래약관</a>
-		|
-		<a  href="#">고객센터</a>
-	</div>
-	<div>대표전화 1588-3819</div>
-
-	<div class="py-5" style="font-size: 24px;">DIRECT</div>
+	<div class="py-3" style="font-size: 24px;">SURVEY</div>
 </nav>

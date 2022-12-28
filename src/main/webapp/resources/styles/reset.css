@@ -56,6 +56,20 @@ a {
     text-decoration: none!important;
 }
 
+li {
+    padding: 10px;
+}
+
+li a {
+    color: #ebebeb;
+}
+
+li a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
 
 
 /* Font Definitions */

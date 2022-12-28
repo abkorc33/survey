@@ -67,16 +67,16 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-white bg-white">
     <div class="container-fluid d-flex">
         <div>
-            <a class="navbar-brand" href="${ctx}/"><img src="${ctx}/resources/icons/logo.svg" alt="home" width="30" height="24" class="d-inline-block align-text-top">DIRECT</a>
+            <a class="navbar-brand" href="${ctx}/"><img src="${ctx}/resources/images/Survey.png" alt="home" width="30" height="30" class="d-inline-block align-text-top"> Survey</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportContent" aria-controls="navbarSupportContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
         <div class="w-50 ">
-            <form id="searchList" method="get"  action="${ctx}/item/searchList">
+            <form id="searchList" method="get"  action="${ctx}/search/searchList">
                 <div class="form-group justify-content-between w-100">
                     <span id="searchBar" class="input-group w-100 align-items-center">
-                        <input class="form-control" type="text" id="searchKeyword" value="${keyward}"  name="keyword" placeholder="원하시는 상품을 찾아보세요!" style="border-width: thin">
+                        <input class="form-control" type="text" id="searchKeyword" value="${keyward}"  name="keyword" placeholder="원하는 survey에 참여해 보세요!" style="border-width: thin">
                         <button id="searchButton" type="submit" class="btn" style="border-width: 0">
                             <i class="fas fa-search"></i>
                         </button>
@@ -88,17 +88,23 @@
             <ul class="nav d-flex align-items-center justify-content-evenly">
                 <li class="nav-item dropdown user">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
-                        <i class="fas fa-user-circle" style="color: black" ></i>
+                        <i class="fas fa-user-circle" style="color: black" > My Survey</i>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: black">
-                        <li><a href="${ctx}/user/signIn">로그인(myeong)</a></li>
+                    <c:choose>
+	                    <c:when test="${isLogOn == true && user != null}">
+	                    	<li><a href="${ctx}/user/myInfo">Survey!</a></li>
+	                        <li><a href="${ctx}/user/myInfo">내 정보</a></li>
+	                        <li><a href="${ctx}/user/myInfo">My Survey</a></li>
+	                        <li><a href="${ctx}/user/myInfo">1:1 문의</a></li>
+	                    </c:when>
+	                    <c:otherwise>
+	                        <li><a href="${ctx}/user/signUp">회원가입</a></li>
+	                        <li><a href="${ctx}/user/signIn">로그인</a></li>
+	                    </c:otherwise>
+                    </c:choose>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a href="${ctx}/user/listMembers">회원목록</a></li>
-                        <li><a href="${ctx}/user/terms_page.do">회원가입</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a href="${ctx}/admin">INDEX ADMIN</a></li>
-                        <li><a href="${ctx}/user/myInfo">내 정보</a></li>
-
+                        <li><a href="${ctx}/admin">ADMIN</a></li>
                     </ul>
                 </li>
                 <div class="d-flex">
@@ -146,8 +152,8 @@
         <div class="modal-dialog modal-dialog-scrollable d-flex justify-content-end " style="margin-right: 50px; margin-top: 50px" >
             <div class="modal-content "  id="shoppingCart">
                 <div class="modal-header d-flex justify-content-evenly">
-                    <h1 class="modal-title fs-5" id="shoppingModalLabel"><b>Your cart</b> <i class="fas fa-circle-info" id="tooltip"></i></h1>
-                    <div id="tooltipText">물건을 장바구니에 담아보세요!</div>
+                    <h1 class="modal-title fs-5" id="shoppingModalLabel"><b>Your Survey</b> <i class="fas fa-circle-info" id="tooltip"></i></h1>
+                    <div id="tooltipText">survey에 참여해 보세요!</div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
