@@ -29,14 +29,14 @@ public class UserController {
 
 		ModelAndView mav = new ModelAndView();
 		// 로그인한 정보를 가지도 데이터베이스에 존재하는지 처리를 하고 그 결과를 가져온다.
-		UserDTO userVO = userService.login(user);
+		UserDTO userDTO = userService.login(user);
 
 		// 로그인한 정보가 데이터베이스에 존재하는지에 따라 처리를 다르게 한다.
-		if(userVO != null) {   // 로그인 정보에 해당하는 자료가 있으면
+		if(userDTO != null) {   // 로그인 정보에 해당하는 자료가 있으면
 			// 아이디와 비밀번호가 일치하면 세션을 발급한다.
-			if(user.getPwd().equals(userVO.getPwd())) {
+			if(user.getPwd().equals(userDTO.getPwd())) {
 				HttpSession session = request.getSession();
-				session.setAttribute("user", userVO);
+				session.setAttribute("user", userDTO);
 				session.setAttribute("isLogOn", true);
 				mav.setViewName("home");   // 메인화면으로 이동
 
