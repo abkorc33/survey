@@ -93,8 +93,8 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: black">
                     <c:choose>
 	                    <c:when test="${isLogOn == true && user != null}">
-	                    	<li><a href="${ctx}/user/myInfo">Survey</a></li>
 	                        <li><a href="${ctx}/user/myInfo">My Survey</a></li>
+	                    	<li><a href="${ctx}/user/myInfo">Survey</a></li>
 	                        <li><a href="${ctx}/user/myInfo">내 정보</a></li>
 	                        <li><a href="${ctx}/user/myInfo">1:1 문의</a></li>
 	                    </c:when>
@@ -118,7 +118,7 @@
                                 </li>
                                 <div class="d-flex" >
                                     <p style="color: gray; margin-top: 10px; margin-right: 20px;"><b>${user.id}님 환영합니다.</b></p>
-                                    <a href="${ctx}/user/logout" class="btn btn-outline-primary">로그아웃</a>
+                                    <a href="${ctx}/user/logout" class="btn btn-outline-warning">로그아웃</a>
                                 </div>
                             </c:when>
                             <c:otherwise>
@@ -137,7 +137,7 @@
                                             placeholder="password"
                                             aria-label="Server"
                                     />
-                                    <button type="submit" class="btn btn-outline-primary">로그인</button>
+                                    <button type="submit" class="btn btn-outline-warning">로그인</button>
                                 </div>
                             </c:otherwise>
                         </c:choose>

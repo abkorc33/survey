@@ -85,10 +85,10 @@ li a:hover {
 }
 
 nav.col-sm-2 {
-    background: #6495ED;
+    background: orange;
     padding: 0;
     flex-direction: row;
-    border-radius: 20px 0px 20px 20px;
+    padding-bottom: 30px;
 }
 
 .nav h4 {
@@ -98,14 +98,6 @@ nav.col-sm-2 {
 #top {
     padding: 0px;
     height: 150px;
-}
-
-#c1 {
-    background: #6495ED;
-    color: white;
-    text-align: center;
-    width: 85%; 
-    border-radius: 0px 20px 20px 0px;
 }
 
 .nav-item button {

@@ -21,6 +21,12 @@ public class UserController {
 	
 	@Autowired
 	private UserService userService;
+	
+	// 로그인 화면
+	@RequestMapping(value = "/signIn", method = RequestMethod.GET)
+	public String signIn() {
+        return "user/signIn";
+	}
 
 	// 로그인 처리
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -64,6 +70,16 @@ public class UserController {
 		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("home");
+		return mav;
+	}
+	
+	// 내 정보 가기
+	@RequestMapping(value="/myInfo", method=RequestMethod.GET)
+	public ModelAndView myInfo(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		HttpSession session = request.getSession();
+		UserDTO userDTO = (UserDTO) session.getAttribute("uesr");
+		ModelAndView mav = new ModelAndView("user/myInfo");
+		mav.addObject("user", userDTO);
 		return mav;
 	}
 	
