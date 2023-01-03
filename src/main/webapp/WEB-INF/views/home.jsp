@@ -11,10 +11,6 @@
 	<title>Home</title>
 </head>
 <style>
-	.mainContainer {
-		background-color: white;
-	}
-
 	.mainCategory{
 		border-radius: 20px;
 		overflow: hidden;
