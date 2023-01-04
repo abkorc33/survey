@@ -94,7 +94,6 @@
                     <c:choose>
 	                    <c:when test="${isLogOn == true && user != null}">
 	                        <li><a href="${ctx}/user/myInfo">My Survey</a></li>
-	                    	<li><a href="${ctx}/user/myInfo">Survey</a></li>
 	                        <li><a href="${ctx}/user/myInfo">내 정보</a></li>
 	                        <li><a href="${ctx}/user/myInfo">1:1 문의</a></li>
 	                    </c:when>
