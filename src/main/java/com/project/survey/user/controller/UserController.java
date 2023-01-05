@@ -83,5 +83,33 @@ public class UserController {
 		return mav;
 	}
 	
+	// 회원가입 화면으로 이동
+	@RequestMapping(value = "/registerAjax_page", method = RequestMethod.GET)
+	public ModelAndView signUp(HttpServletRequest request, HttpServletResponse response) throws Exception {		
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/user/registerAjax_page");	// 회원가입화면으로 이동
+		
+		return mav;
+	}
+
+	// 회원가입 처리
+	@RequestMapping(value = "/addMember", method=RequestMethod.POST)
+	public ModelAndView addMember(UserDTO userDTO,
+			HttpServletRequest request, HttpServletResponse response) throws Exception {
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text.html;charset-UTF-8");
+		
+		int result = 0;
+		// 사용자가 입력한 정보를 서비스에게 넘겨주어 처리하게 한다.
+		//result = userService.addMember(userDTO);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("result", result);
+		mav.setViewName("/home");
+		
+		return mav;
+	}
+	
 	
 }
